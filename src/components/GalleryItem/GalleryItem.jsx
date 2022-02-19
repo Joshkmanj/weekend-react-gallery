@@ -7,6 +7,7 @@ function GalleryItem({ galleryArray }) {
     };
     const imageClick = (id) => {
         console.log('Clicked image', id);
+        // console.log('note:', picObject.note);
     };
 
     return (
@@ -17,9 +18,9 @@ function GalleryItem({ galleryArray }) {
                 key={picObject.id}>
                     <img 
                     onClick={(event)=>(imageClick(picObject.id))} 
-                    src={`images/bike${picObject.id}.jpeg`}
+                    src={picObject.path}
                     />
-                    <button onClick={(event)=>(clickLikeHandler(picObject.id))}>Like</button>
+                    <button onClick={(event)=>(clickLikeHandler(picObject.id))}>Like {picObject.likes}</button>
                 </div>
             )
             )}
