@@ -1,13 +1,12 @@
 import GalleryItem from "../GalleryItem/GalleryItem";
 // import { useState } from "react";
 
-function GalleryList({galleryArray}) {
+function GalleryList({galleryItems}) {
 
-    // let [galleryArray, setGalleryArray] = useState([]);
 
     return (
         <div className="gallery">
-            <GalleryItem galleryArray={galleryArray}/>
+            <GalleryItem galleryItems={galleryItems}/>
         </div>
     )
 }

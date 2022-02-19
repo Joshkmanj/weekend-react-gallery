@@ -1,6 +1,6 @@
 import "./GalleryItem.css"
 
-function GalleryItem({ galleryArray }) {
+function GalleryItem({ galleryItems }) {
 
     const clickLikeHandler = (id) => {
         console.log('Clicked like button', id);
@@ -12,7 +12,7 @@ function GalleryItem({ galleryArray }) {
 
     return (
         <>
-            {galleryArray.map( picObject =>(
+            {galleryItems.map( picObject =>(
                 <div 
                 className="card"
                 key={picObject.id}>

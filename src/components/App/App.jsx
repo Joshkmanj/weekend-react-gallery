@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import GalleryList from '../GalleryList/GalleryList';
-import {useState} from 'react';
+import { useState, useEffect } from 'react';
+import Axios from 'axios';
 
 // let galleryArray = [
 //   {id:1,
@@ -39,16 +40,32 @@ import {useState} from 'react';
 
 function App() {
 
-  
-    return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Gallery of My Life</h1>
-        </header>
-        <GalleryList
-        galleryArray={galleryArray}/>
-      </div>
-    );
+  const {galleryItems, setGalleryItems} = useState([])
+
+  useEffect(() => {
+    getImages()
+  }, [])
+
+
+  const getImages = () => {
+    console.log('Getting images');
+    Axios.get('/gallery').then(response=>{
+      console.log('Server responded to GET request:', response);
+      setGalleryItems(response)
+    }).catch(error=>{
+      console.log('Server didn\'t respond to GET request:', error);
+    })
+  }
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1 className="App-title">Gallery of My Life</h1>
+      </header>
+      <GalleryList
+        galleryItems={galleryItems} />
+    </div>
+  );
 }
 
 export default App;
