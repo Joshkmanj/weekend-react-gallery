@@ -1,12 +1,14 @@
 import GalleryItem from "../GalleryItem/GalleryItem";
+// import { useState } from "react";
 
-function GalleryList() {
+function GalleryList({galleryArray}) {
+
+    // let [galleryArray, setGalleryArray] = useState([]);
 
     return (
-        <>
-            <p>Gallery goes here</p>
-            <GalleryItem/>
-        </>
+        <div className="gallery">
+            <GalleryItem galleryArray={galleryArray}/>
+        </div>
     )
 }
 export default GalleryList;
