@@ -1,12 +1,14 @@
 import GalleryItem from "../GalleryItem/GalleryItem";
-// import { useState } from "react";
 
-function GalleryList({galleryItems}) {
+function GalleryList({galleryItems, clickLike}) {
 
 
     return (
         <div className="gallery">
-            <GalleryItem galleryItems={galleryItems}/>
+            <GalleryItem 
+            galleryItems={galleryItems}
+            clickLike={clickLike}
+            />
         </div>
     )
 }
