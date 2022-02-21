@@ -22,11 +22,22 @@ button {
   text-align: -webkit-center;
   row-gap: 15px;
 }
-.card{
+.card,.blurCard{
   width:200px;
   height:249.93px;
   box-shadow: 1px 1px 8px grey;
   padding: 0px;
   border-radius: 3px;
-  background-size: contain;
+  background-size: cover;
+}
+.blurCard{
+  backdrop-filter: blur(2px);
+  display: grid;
+  background-color: #ffffff47;
+}
+.description{
+  display: inline-block;
+  font-weight: bolder;
+  position: relative;
+  align-self: center;
 }

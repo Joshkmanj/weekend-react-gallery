@@ -19,8 +19,12 @@ function GalleryItem({ photo, clickLike }) {
         <>
                 <div
                     className="frame">
-                    <div className={'card'} style={{backgroundImage: `url(${photo.path})`}} onClick={(event) => (imageClick())}>
-                    <p>{photo.note}</p>
+                    <div 
+                    className={'card'} 
+                    style={{backgroundImage: `url(${photo.path})`}} 
+                    // style={ highlight ? {backgroundImage: `url(${photo.path})`,backdropfilter: `blur(3px)` } : {backgroundImage: `url(${photo.path})`} } 
+                    onClick={(event) => (imageClick())}>
+                    {highlight && <div className='blurCard'><h4 className="description">{photo.note}</h4></div>}
                     </div>
                     <button onClick={(event) => (clickLike(photo.id))}>Like {photo.likes}</button>
                 </div>
