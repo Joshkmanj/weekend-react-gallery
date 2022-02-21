@@ -42,7 +42,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1 className="App-title">Gallery of My Life</h1>
+        <h1 className="App-title">Bike Adventure Gallery</h1>
       </header>
       <GalleryList
         galleryItems={galleryItems}
