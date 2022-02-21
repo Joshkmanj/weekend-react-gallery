@@ -22,9 +22,9 @@ button {
   text-align: -webkit-center;
   row-gap: 15px;
 }
-img{
-  /* width:200px;
-  height:249.93px; */
+.card{
+  width:200px;
+  height:249.93px;
   box-shadow: 1px 1px 8px grey;
   padding: 0px;
   border-radius: 3px;}

@@ -1,29 +1,31 @@
 import "./GalleryItem.css"
+import { useState } from "react";
 
-function GalleryItem({ galleryItems, clickLike }) {
+function GalleryItem({ photo, clickLike }) {
 
-    const [highlight, setHighlight] = useState('')
+    const [highlight, setHighlight] = useState(false)
 
-    
 
-    const imageClick = (id) => {
-        console.log('Clicked image', id);
+
+    const imageClick = () => {
+        console.log('Clicked image');
+        setHighlight(!highlight)
         // console.log('note:', picObject.note);
     };
 
+
+    console.log('Highlighted image:', highlight);
     return (
         <>
-            {galleryItems.map((picObject) => (
                 <div
-                    className="card"
-                    key={picObject.id}>
-                    <img
-                        onClick={(event) => (imageClick(picObject.id))}
-                        src={picObject.path}
-                    />
-                    <button onClick={(event) => (clickLike(picObject.id))}>Like {picObject.likes}</button>
-                </div>)
-            )}
+                    className="frame">
+                    <div className={'card'} style={{backgroundImage: `url(${photo.path})`}} onClick={(event) => (imageClick())}>
+                    <p>{photo.note}</p>
+                    </div>
+                    <button onClick={(event) => (clickLike(photo.id))}>Like {photo.likes}</button>
+                </div>
+        
+            
         </>)
 }
 export default GalleryItem;
