@@ -31,9 +31,9 @@ button {
   background-size: cover;
 }
 .blurCard{
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(3px);
   display: grid;
-  background-color: #ffffff47;
+  background-color: #ffffff54;
 }
 .description{
   display: inline-block;
