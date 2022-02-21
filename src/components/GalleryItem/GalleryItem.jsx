@@ -1,4 +1,3 @@
-import "./GalleryItem.css"
 import { useState } from "react";
 
 function GalleryItem({ photo, clickLike }) {
