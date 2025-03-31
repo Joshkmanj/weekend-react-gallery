@@ -36,4 +36,4 @@ Link to software that is required to install the app.
 Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality.
 
 ## Support
-If you have suggestions or issues, please email me at krale006@umn.edu
+If you have suggestions or issues, please email me at joshuakralewski@gmail.com
